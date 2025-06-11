@@ -11,7 +11,7 @@
 		$tempPass = $_POST['password'];
 		$password = password_hash($tempPass, PASSWORD_DEFAULT);
 
-		if(empty($name) || empty($surname) || empty($username) || empty($email) || empty($password))
+		if(empty($name) || empty($username) || empty($email) || empty($password))
 		{
 			echo "You need to fill all the fields.";
 		}
@@ -30,11 +30,10 @@
 			}
 			else
 			{
-				$sql = "insert into users (name, surname, username, email, password) values (:name, :surname, :username, :email, :password)";
+				$sql = "insert into users (name, username, email, password) values (:name, :username, :email, :password)";
 				$insertSql = $conn->prepare($sql);
 			
-				$insertSql->bindParam(':name', $name); 
-				$insertSql->bindParam(':surname', $surname); 
+				$insertSql->bindParam(':name', $name);
 				$insertSql->bindParam(':username', $username);
 				$insertSql->bindParam(':email', $email);
 				$insertSql->bindParam(':password', $password);
@@ -42,7 +41,7 @@
 				$insertSql->execute();
 
 				echo "Data saved successfully ...";
-				header( "refresh:2; url=login.php" ); 
+				header( "refresh:2; url=index.php" ); 
 			}
 		}
 	}

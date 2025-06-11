@@ -21,7 +21,7 @@
 
 		<button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Sign up</button>
 
-		<small>Already have account? <a href="login.php">Log In</a></small>
+		<small>Already have account? <a href="index.php">Log In</a></small>
 
 		<p class="mt-5 mb-3 text-muted">Digital School &copy; 2023</p>
 	</form>

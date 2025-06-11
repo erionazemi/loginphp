@@ -21,7 +21,7 @@ if (isset($_POST["submit"])) {
             header("Location: dashboard.php");
           }else{
             echo "password incorrect";
-            header("refresh:2; url=login.php");
+            header("refresh:2; url=index.php");
           }
          }else{
             echo "user not found";
