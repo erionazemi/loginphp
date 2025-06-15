@@ -8,7 +8,7 @@
 <body>
     
     <form action="add.php" method="POST">
-        <input type="number" name="id" placeholder="Id"><br>
+        <input type="number" name="id" placeholder="Id" id="id"><br>
         <input type="text" name="name" placeholder="Name"><br>
         <input type="text" name="surname" placeholder="Surame"><br>
         <input type="email" name="email" placeholder="Email"><br>

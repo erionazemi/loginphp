@@ -10,10 +10,10 @@
  <?php
 include_once("config.php");
 
-$sql = "SELECT * FROM user";
+$sql = "SELECT * FROM users";
 $getUser = $conn->prepare($sql);
 $getUser->execute();
-$user = $getUser->fetchAll();
+$users = $getUser->fetchAll();
 
  ?>
 
@@ -29,7 +29,7 @@ $user = $getUser->fetchAll();
     <tbody>
         <tr>
             <?php
-                foreach ($user as $user) {
+                foreach ($users as $user) {
             ?>
 
             <td><?= $user['id']?></td>

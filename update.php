@@ -8,7 +8,7 @@ if(isset($_POST['update'])){
     $surname = $_POST['surname'];
     $email = $_POST['email'];
 
-    $sql = "UPDATE user SET name=:name, surname=:surname, email=:email WHERE id=:id";
+    $sql = "UPDATE users SET name=:name, surname=:surname, email=:email WHERE id=:id";
     $prep = $conn->prepare($sql);
     $prep->bindParam(':id', $id) ;
     $prep->bindParam(':name', $name) ;

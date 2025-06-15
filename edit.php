@@ -4,7 +4,7 @@ include_once("config.php");
 
 $id = $_GET['id'];
 
-$sql = "SELECT * FROM user WHERE id=:id";
+$sql = "SELECT * FROM users WHERE id=:id";
 
 $prep = $conn->prepare($sql);
 
